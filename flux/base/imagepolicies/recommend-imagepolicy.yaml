@@ -7,7 +7,7 @@ spec:
   imageRepositoryRef:
     name: recommend-image-repo
   filterTags:
-    pattern: '^(latest|[0-9]+)$'
+    pattern: '^(latest|[0-9]+)$' # 최신 태그를 포함하도록 패턴 설정
   policy:
     semver:
       range: '*'

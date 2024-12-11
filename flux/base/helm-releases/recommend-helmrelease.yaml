@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: andychoi1997/recommend-system
-      tag: "{{ .Values.image.tag | default 'latest' }}"
+      tag: '{{ .Values.image.tag }}' # values.yaml에서 FluxCD가 관리하는 값을 참조
