@@ -1,11 +1,13 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
-  name: chat-image-policy
+  name: recommend-system-policy
   namespace: flux-system
 spec:
+  imageRepositoryRef:
+    name: recommend-system  # ImageRepository 이름
   filterTags:
-    pattern: '^latest$'
+    pattern: latest
   policy:
     semver:
-      range: '*'
+      range: "*"

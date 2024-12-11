@@ -1,0 +1,21 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageUpdateAutomation
+metadata:
+  name: recommend-update
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: helm-repo
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: "automation@flux-system.local"
+        name: "FluxCD Automation"
+      messageTemplate: "Update image tag for {{ .Object.metadata.name }} to {{ .Updated.ImageTag }}"
+    push:
+      branch: main
