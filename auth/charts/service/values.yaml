@@ -65,6 +65,7 @@ ingress:
     alb.ingress.kubernetes.io/group.name: plantify
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-1:106649504231:certificate/7b1a18d7-b831-4802-bfb9-77d564bb323e
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
   tls: []
   hosts:
     - paths:
@@ -165,3 +166,8 @@ env:
       secretKeyRef:
         name: secret
         key: JWT_REFRESH_TOKEN_EXPIRATION
+  - name: AUTH_SERVICE_URL
+    valueFrom:
+      secretKeyRef:
+        name: secret
+        key: AUTH_SERVICE_URL

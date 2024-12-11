@@ -107,7 +107,7 @@ autoscaling:
 volumes:
   - name: secret-volume
     secret:
-      secretName: mysql-secret
+      secretName: secret
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:

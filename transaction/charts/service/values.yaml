@@ -64,6 +64,8 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: plantify
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-1:106649504231:certificate/7b1a18d7-b831-4802-bfb9-77d564bb323e
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
   tls: []
   hosts:
     - paths:
@@ -104,7 +106,7 @@ autoscaling:
 volumes:
   - name: secret-volume
     secret:
-      secretName: mysql-secret
+      secretName: secret
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
