@@ -153,4 +153,4 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,helm,macos
 
-secret.yaml
+*/secret.yaml
