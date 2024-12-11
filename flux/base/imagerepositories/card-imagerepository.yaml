@@ -1,8 +1,0 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageRepository
-metadata:
-  name: card-image-repo
-  namespace: flux-system
-spec:
-  image: andychoi1997/card-service
-  interval: 1m

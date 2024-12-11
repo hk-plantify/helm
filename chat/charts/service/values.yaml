@@ -69,7 +69,7 @@ ingress:
   tls: []
   hosts:
     - paths:
-        - path: /
+        - path: /chat
           pathType: Prefix
 
 resources: {}
@@ -103,20 +103,26 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
+volumes:
+  - name: secret-volume
+    secret:
+      secretName: secret
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+volumeMounts:
+  - name: secret-volume
+    mountPath: /etc/secrets
+    readOnly: true
 
 nodeSelector: {}
 
 tolerations: []
 
 affinity: {}
+
+env:
+  - name: GRPC_SERVER_ADDRESS
+    valueFrom:
+      secretKeyRef:
+        name: secret
+        key: GRPC_SERVER_ADDRESS
