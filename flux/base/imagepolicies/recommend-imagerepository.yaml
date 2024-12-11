@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: recommend-image-repo
+  namespace: flux-system
+spec:
+  image: andychoi1997/recommend-system
+  interval: 1m
