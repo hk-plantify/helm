@@ -6,8 +6,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ./helm/recommend # Helm 차트 경로
-  interval: 5m
+      chart: ./recommend
+      sourceRef:
+        kind: GitRepository
+        name: helm-config
+  interval: 1m
   values:
     replicaCount: 2
     image:
