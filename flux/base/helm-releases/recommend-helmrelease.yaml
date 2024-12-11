@@ -4,15 +4,16 @@ metadata:
   name: recommend
   namespace: default
 spec:
+  releaseName: recommend
   chart:
     spec:
-      chart: ./recommend
+      chart: ./chat/charts/model
       sourceRef:
         kind: GitRepository
-        name: helm-config
-  interval: 1m
+        name: helm-repo
+        namespace: flux-system
+  interval: 5m
   values:
-    replicaCount: 2
     image:
       repository: andychoi1997/recommend-system
-      tag: v1.0.0
+      tag: latest
