@@ -1,13 +1,13 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta2
+apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
   name: card-image-policy
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: card-image-repo  # 참조할 ImageRepository의 이름
+    name: card-image-repo
   filterTags:
     pattern: '^(latest|[0-9]+)$'
   policy:
     semver:
-      range: '*'
+      range: "*"

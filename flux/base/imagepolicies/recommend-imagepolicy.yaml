@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: recommend-image-repo  # 참조할 ImageRepository의 이름
+    name: recommend-image-repo
   filterTags:
     pattern: '^(latest|[0-9]+)$'
   policy:
