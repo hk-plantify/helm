@@ -156,4 +156,4 @@ Temporary Items
 */secret.yaml
 */flux-ssh-key
 */flux-ssh-key.pub
-helm/flux/plantify
+*/plantify
