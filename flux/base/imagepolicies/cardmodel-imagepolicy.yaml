@@ -1,11 +1,11 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
-  name: recommend-system-policy
+  name: card-service-policy
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: recommend-system
+    name: card-service
   filterTags:
     pattern: ^.*$
   policy:

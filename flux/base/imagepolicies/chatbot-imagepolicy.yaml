@@ -1,11 +1,11 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
-  name: recommend-system-policy
+  name: chatbot-policy
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: recommend-system
+    name: chatbot
   filterTags:
     pattern: ^.*$
   policy:

@@ -1,13 +1,13 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: recommend
-  namespace: recommend
+  name: card
+  namespace: card
 spec:
-  releaseName: recommend
+  releaseName: card
   chart:
     spec:
-      chart: ./recommend/charts/model
+      chart: ./card/charts/model
       sourceRef:
         kind: GitRepository
         name: helm-repo
@@ -15,5 +15,5 @@ spec:
   interval: 5m
   values:
     image:
-      repository: andychoi1997/recommend-system
-      tag: "latest"
+      repository: andychoi1997/card-service
+      tag: latest  # 고정된 'latest' 대신 ImagePolicy가 업데이트한 태그로 교체
