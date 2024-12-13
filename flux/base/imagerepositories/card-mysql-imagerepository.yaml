@@ -1,8 +1,8 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
-  name: chatbot
+  name: card-mysql
   namespace: flux-system
 spec:
   interval: 1m
-  image: andychoi1997/chatbot
+  image: mysql
