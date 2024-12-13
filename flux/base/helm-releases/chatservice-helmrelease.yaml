@@ -1,13 +1,13 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: chat-model
+  name: chat-service
   namespace: chat
 spec:
-  releaseName: chat-model
+  releaseName: chat-service
   chart:
     spec:
-      chart: ./chat/charts/model
+      chart: ./chat/charts/service
       sourceRef:
         kind: GitRepository
         name: helm-repo
@@ -15,5 +15,5 @@ spec:
   interval: 5m
   values:
     image:
-      repository: andychoi1997/chatbot
+      repository: seungjusuh/chat-service
       tag: latest  # 고정된 'latest' 대신 ImagePolicy가 업데이트한 태그로 교체

@@ -10,4 +10,4 @@ spec:
     pattern: ^.*$
   policy:
     alphabetical:
-      order: desc  # 가장 최신 태그 선택
+      order: asc  # 가장 최신 태그 선택

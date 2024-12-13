@@ -1,10 +1,10 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: card
+  name: card-model
   namespace: card
 spec:
-  releaseName: card
+  releaseName: card-model
   chart:
     spec:
       chart: ./card/charts/model
@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: andychoi1997/card-service
-      tag: latest  # 고정된 'latest' 대신 ImagePolicy가 업데이트한 태그로 교체
+      tag: latest
