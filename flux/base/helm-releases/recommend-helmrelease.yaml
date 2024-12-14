@@ -7,7 +7,7 @@ spec:
   releaseName: recommend
   chart:
     spec:
-      chart: ./recommend/charts/model
+      chart: recommend/charts/model
       sourceRef:
         kind: GitRepository
         name: helm-repo
@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: andychoi1997/recommend-system
-      tag: "latest"
+      tag: "202412140830-dcd09ba0"
