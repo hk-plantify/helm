@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: base
+  namespace: flux-system
+spec:
+  interval: 5m                                  # 5분마다 동기화
+  path: ./base                                  # Git 레포지토리 기준 상대 경로
+  prune: true                                   # 기존 리소스 정리 활성화
+  sourceRef:
+    kind: GitRepository
+    name: helm-repo                             # GitRepository 이름
+  timeout: 5m                                   # 작업 시간 초과 설정

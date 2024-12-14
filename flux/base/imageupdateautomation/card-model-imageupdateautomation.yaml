@@ -1,7 +1,7 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageUpdateAutomation
 metadata:
-  name: card-model-update
+  name: card-service-update
   namespace: flux-system
 spec:
   interval: 1m
@@ -16,6 +16,6 @@ spec:
       author:
         email: "automation@flux-system.local"
         name: "FluxCD Automation"
-      messageTemplate: "Update image tag for {{ .Object.metadata.name }} to {{ .Updated.ImageTag }}"
+      messageTemplate: "Update image tag for card-service to {{ .Updated.ImageTag }}"
     push:
       branch: main

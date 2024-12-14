@@ -7,7 +7,7 @@ spec:
   releaseName: card-model
   chart:
     spec:
-      chart: ./card/charts/model
+      chart: card/charts/model
       sourceRef:
         kind: GitRepository
         name: helm-repo
@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: andychoi1997/card-service
-      tag: latest
+      tag: "88"

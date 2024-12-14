@@ -7,7 +7,7 @@ spec:
   imageRepositoryRef:
     name: card-service
   filterTags:
-    pattern: ^.*$
+    pattern: '^\d+$'  # 숫자만 포함된 태그 (예: 43, 44, 45)
   policy:
-    alphabetical:
-      order: asc  # 가장 최신 태그 선택
+    numerical:
+      order: asc  # 최신 숫자 태그 선택
