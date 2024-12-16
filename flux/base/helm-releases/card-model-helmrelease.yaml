@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: andychoi1997/card-service
-      tag: "108"
+      tag: "112"
