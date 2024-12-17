@@ -20,4 +20,4 @@ spec:
     push:
       branch: main
   update:
-    path: ./base  # base 디렉터리 내 kustomization.yaml 경로
+    path: flux/base  # base 디렉터리 내 kustomization.yaml 경로
