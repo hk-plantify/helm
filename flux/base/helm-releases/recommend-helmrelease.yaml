@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: andychoi1997/recommend-system
-      tag: "202412140830-dcd09ba0"
+      tag: "202412161012-f202e45d"

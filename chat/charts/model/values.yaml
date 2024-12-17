@@ -129,3 +129,8 @@ env:
       secretKeyRef:
         name: secret
         key: SQLALCHEMY_DATABASE_URL
+  - name: AUTH_SERVICE_URL
+    valueFrom:
+      secretKeyRef:
+        name: secret
+        key: AUTH_SERVICE_URL
