@@ -5,3 +5,7 @@ resources:
   - ./imagepolicies/
   - ./imagerepositories/
   - ./imageupdateautomation/
+
+images:
+  - name: andychoi1997/recommend-system
+    newTag: "202412161012-f202e45d"  # ImageUpdateAutomation이 이 값을 최신 태그로 업데이트
